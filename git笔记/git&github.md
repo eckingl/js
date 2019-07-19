@@ -3,6 +3,10 @@
 + SSH
 
   x6xH7bc4FoDNPTPS/sRRCVpoZ2M25goQ9I167OsJshD+88Y9uJqlw0CSC8mRN7RxrBOKweosDE+H6wxcm7jQcVe1YVOkPiTxXVzpRC1qoYWHHeFYh5EtOyQqWrrGPz/vf2GFs4jcU4WxpTmhDWXjk0nCaelYFnKtaKSmTGOqRjeQti+gPsaBMq1eClrebfNRXMUTOZiE/DeZYNNRP8WXnFy9Zhsm9ymCTBLmcYdUEiSKVpXSbCtXZ7S/uDJuWKhTM/yLCFQ6gLxAPkx2iW41CTmdj+KOwkx0/hhJ5OeFIUYO3MQQOtwfT5 eckingl@hotmail.com
+  
++ 错误代码
+
+  + error: failed to push some refs to 'git@github.com:eckingl/js.git'
 
 
 
