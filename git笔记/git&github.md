@@ -27,6 +27,14 @@
     ` git stash pop`
   
     无法pull问题解决
+  
++ 基本操作
+
+  1. 上传
+
+     `git push origin master`
+
+     
 
 
 
