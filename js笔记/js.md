@@ -1,7 +1,5 @@
 # javascript
 
-- 
-
 - ###ECMAScript
 
    1. #####**基本语法**
