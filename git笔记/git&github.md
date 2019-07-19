@@ -7,6 +7,26 @@
 + 错误代码
 
   + error: failed to push some refs to 'git@github.com:eckingl/js.git'
+  
+    原因:远程添加README.md文件后无法push,因为本地没有README.md文件,需要将文件拉取到本地,处理代码为:
+  
+    `git pull --rebasa origin master`
+  
+    执行此代码后出现错误,错误代码为:
+  
+    `error: cannot pull with rebase: You have unstaged changes. error: additionally, your index contains uncommitted changes. error: please commit or stash them.`
+  
+    原因:有未提交的更改,无法git pull
+  
+    解决代码:
+  
+    `git stash`
+  
+    `git pull -rebase`
+  
+    ` git stash pop`
+  
+    无法pull问题解决
 
 
 

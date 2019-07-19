@@ -344,7 +344,7 @@
                
                
    
-- ### DOM
+- ### **DOM**
   
   1. 功能
   
@@ -384,7 +384,7 @@
         </script>
         ```
   
-- **事件**
+- ### **事件**
 
    1. 功能
 
@@ -422,10 +422,28 @@
    + 电灯开关案例
 
      ```html
-     
+     <img id="haha" src="js/learnJs/img/haha1.jpg" alt="tu">
+     <script>
+	// 获取图片	
+     	var haha = document.getElementById("haha");
+     	var flag = false;
+     	// 绑定事件
+     	haha.onclick = function () {	
+     		if (flag) {
+     			haha.src = "/Users/lukang/local/js/learnJs/img/haha1.jpg";
+     			flag = false;
+     		}else{
+     			haha.src = "/Users/lukang/local/js/learnJs/img/haha2.jpg";
+     			flag = true;
+     		}
+     	}
+     </script>
      ```
-
      
+   
+   
+   
+- ### **BOM**
 
 
 

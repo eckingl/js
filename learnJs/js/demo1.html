@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- 目的:点击图片自动换下一张,再次点击返回第一张,
+		 使用方法:事件简单绑定
+		-->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo1</title>
+</head>
+<body>
+
+<!-- 导入图片 -->
+<img id="haha" src="/Users/lukang/local/js/learnJs/img/haha1.jpg" alt="tu">
+<script>
+	
+	// 获取图片	
+	var haha = document.getElementById("haha");
+
+	var flag = false;
+
+	// 绑定事件
+	haha.onclick = function () {
+	
+		if (flag) {
+			haha.src = "/Users/lukang/local/js/learnJs/img/haha1.jpg";
+			flag = false;
+		}else{
+			haha.src = "/Users/lukang/local/js/learnJs/img/haha2.jpg";
+			flag = true;
+
+		}
+
+		
+
+	}
+
+</script>
+
+
+</body>
+</html>
