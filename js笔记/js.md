@@ -714,7 +714,7 @@
       
       5. screen(显示器屏幕对象)
    
-- ### **DOM系统**
+- ### *DOM系统**
 
    1. 概念:Document Object Model 文档对象模型
 
@@ -817,12 +817,10 @@
                   </script>
                   ```
    
-                  
-   
                2. setAttribute():设置属性
    
                   ```html	
-                  <a>点击我试试</a>
+      <a>点击我试试</a>
                   <input id="btn_A" type="button" value="设置属性">
                   <script>
                     var btn_set = document.getElementById("btn_A");
@@ -831,48 +829,45 @@
                	 element_a.setAttribute
                      ("href","https://www.baidu.com");
                   }
-                 </script>
-   ```
-                 
-       
+                   </script>
+                 ```
+           
        3. **Node对象**
-   
+       
            1. 特点:所有dom对象都可认为是一个节点
-   
+       
            2. 方法
        
                1. CRUDdom树
        
-                   1. 添加 appendchild()
+                   1.  添加 appendchild()
        
                        ```html
                        <style>
                          #div3{
-                       		width: 100px;
-                       		height: 100px;
-                       		border: 1px solid red;
-                       	}
+                           width: 100px; 
+                           height: 100px;
+                           border: 1px solid red;
+                         }
                        </style>
                        <div id="div1">
-                        	<div id="div2">
-                          	div2
-                         	</div>
-                         div1
+                          <div id="div2">
+                             div2
+                          </div>
+                        div1
                        </div>
                        <script>
-                       	var element_add = document.getElementById("add");
-                       	element_add.onclick = function(){
-                           var div1 = document.getElementById("div1");
-                           //创建节点
-                           var div3 = document.createElement("div");
-                           //添加样式
-                           div3.setAttribute("id","div3");
-                           div1.appendChild(div3);
-                       	}
+                         var element_add = document.getElementById("add");
+                         element_add.onclick = function(){
+                         	var div1 = document.getElementById("div1");
+                            //创建节点
+                            var div3 = document.createElement("div");
+                            //添加样式                  
+                            div3.setAttribute("id","div3");
+                            div1.appendChild(div3);
+                         }
                        </script>
                        ```
-       
-                       
        
                    2. 删除 removechild()
        
@@ -881,28 +876,28 @@
                        	div{
                        		border: 1px solid red;
                        	}
-                       	#div1{
-                       		width: 200px;
-                       		height: 200px;
-                       	}
-                       	#div2{
-                       		width: 100px;
-                       		height: 100px;
-                       	}
+                        	#div1{
+                             width: 200px;
+                             height: 200px;
+                          }
+                          #div2{
+                             width: 100px;
+                             height: 100px;
+                           }
                        </style>
                        <div id="div1">
-                        <div id="div2">
-                          div2
-                         </div>
+                          <div id="div2">
+                             div2
+                          </div>
                          div1
                        </div>
                        <script>
-                       	var element_a = document.getElementById("del");
-                       	element_a.onclick = function (){
-                       		var div1 = document.getElementById("div1");
-                       		var div2 = document.getElementById("div2");
-                       		div1.removeChild(div2);
-                       	}
+                          var element_a = document.getElementById("del");
+                          element_a.onclick = function (){
+                             var div1 = document.getElementById("div1");
+                             var div2 = document.getElementById("div2");
+                             div1.removeChild(div2);
+                          }
                        </script>
                        ```
        
@@ -918,19 +913,16 @@
                    alert(div1);
                    ```
        
-       4. **案例**
+           4. **案例**
        
-           ```html
-           <!--动态表格-->
-           ```
+               ```html
+                <!--动态表格-->
+               ```
        
-           
-       
-       
-       
-       
-       
-       
+               
+   
+   
+   ​    
 
 
 
