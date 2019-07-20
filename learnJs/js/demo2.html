@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo02</title>
+</head>
+<body>
+	<!-- 
+	open():打开一个新的浏览器窗口
+	close():关闭浏览器窗口.谁调用关谁 
+	-->
+	<input id="openBtn" type="button" value="打开窗口">
+	<input id="closeBtn" type="button" value="关闭窗口">
+
+	<script>
+		//打开新窗口
+		var openBtn = document.getElementById("openBtn");
+
+		var newwindow;
+		openBtn.onclick = function(){
+			newwindow = open("https://www.baidu.com/s?wd=a");
+		}
+
+		var closeBt = document.getElementById("closeBtn");
+		closeBt.onclick = function(){
+			newwindow.close();
+		}
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CRUD dom 树</title>
+	<style>
+		
+		div{
+			border: 1px solid red;
+		}
+		#div1{
+			width: 200px;
+			height: 200px;
+		}
+		#div2{
+			width: 100px;
+			height: 100px;
+		}
+		#div3{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+		}
+
+	</style>
+</head>	
+<body>
+	<div id="div1">
+		<div id="div2">
+			div2
+		</div>
+		div1
+	</div>
+	<!-- javascript:void(0):使超链接保持被点击,但是不跳转的关键代码 -->
+	<a href="javascript:void(0)" id="del">点击删除节点</a>
+	<a href="javascript:void(0)" id="add">点击添加节点</a>
+
+	<script>
+		var element_del = document.getElementById("del");
+		element_del.onclick = function (){
+			var div1 = document.getElementById("div1");
+			var div2 = document.getElementById("div2");
+			div1.removeChild(div2);
+		}
+
+		var element_add = document.getElementById("add");
+		element_add.onclick = function(){
+			var div1 = document.getElementById("div1");
+			var div3 = document.createElement("div");
+
+			div3.setAttribute("id","div3");
+
+			div1.appendChild(div3);
+		}
+
+
+
+
+	</script>
+
+
+</body>
+</html>

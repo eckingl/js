@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自动跳转</title>
+</head>
+<style>
+	/*居中,字体颜色*/
+	p{
+		text-align: center;
+	}
+	span{
+		color: red;
+	}
+</style>
+
+<body>
+	<p>
+		<span id="time">5</span>秒后,自动跳转
+	</p>
+
+	<script>
+		//s:倒计时
+		var s = 5;
+		var time = document.getElementById("time");
+
+		function showtime(){
+			s--;
+			if (s<=0) {
+				location.href = "https://www.baidu.com";
+			}
+			time.innerHTML = s +"";
+		}
+
+		setInterval(showtime,1000);
+
+
+	</script>
+</body>
+</html>
