@@ -714,7 +714,7 @@
       
       5. screen(显示器屏幕对象)
    
-- ### *DOM系统**
+- ### DOM系统
 
    1. 概念:Document Object Model 文档对象模型
 
@@ -826,22 +826,22 @@
                     var btn_set = document.getElementById("btn_A");
                     btn_set.onclick = function(){
                       var element_a = document.getElementsByTagName("a")[0];
-               	 element_a.setAttribute
+              	 	 element_a.setAttribute
                      ("href","https://www.baidu.com");
                   }
                    </script>
                  ```
-           
+          
        3. **Node对象**
-       
+      
            1. 特点:所有dom对象都可认为是一个节点
-       
+      
            2. 方法
-       
+      
                1. CRUDdom树
-       
+      
                    1.  添加 appendchild()
-       
+      
                        ```html
                        <style>
                          #div3{
@@ -868,9 +868,9 @@
                          }
                        </script>
                        ```
-       
+      
                    2. 删除 removechild()
-       
+      
                        ```html
                        <style>		
                        	div{
@@ -900,26 +900,119 @@
                           }
                        </script>
                        ```
-       
+      
                    3. 替换 replacechild()
-       
+      
            3. 属性
-       
+      
                1. parentNode;
-       
+      
                    ```javascript
                    var div2 = document.getElementById("div2");
                    var div1 = div2.parentNode;
                    alert(div1);
                    ```
-       
+      
            4. **案例**
-       
+      
                ```html
-                <!--动态表格-->
+               <!--动态表格-->
+               <!--typora排版乱的不行,文件位于./js/learnJs/js/demo8.html-->
                ```
-       
-               
+      
+   4. #### **HTML DOM**
+   
+       1. 标签体的设置和获取:innerHTML
+   
+           ```html
+           <div id="div1">
+             div
+           </div>
+           <script>
+           	var div = doucument.getElementById("div");
+           	var innerHTML = div.innerHTML;
+              div.innerHTML+="<input type= 'text'";
+           </script>
+           ```
+   
+       2. 使用html元素对象的属性
+   
+       3. 控制样式
+   
+           1. 使用元素的style属性值来设置
+   
+               ```html
+               <div id="div1">
+                 div
+               </div>
+               <script>
+               	//第一种修改样式的方式
+                 var div = doucument.getElementById("div1");
+                 div.onclick = function(){
+                   div.style.border = "1px solid red";
+                   div.style.width = "200px";
+                 }    
+               </script>
+               ```
+   
+           2. 提前定义好样式,通过元素的className来设置class属性值
+   
+               ```html
+               <style>
+                 .d1{
+                   border:"1px solid red";
+                   witth:"100px"
+                 }
+                 .d2{
+                   border:"4px solid red";
+                   witth:"200px"
+                 }
+               </style>
+               <script>
+               	var div = doucument.getElementById("div1");
+                 div.onlick = function(){
+                   div.className("d1");
+                 }
+               </script>
+               ```
+   
+
+
+
++ ### 事件监听机制
+  
+  1. 概念:某些组件被执行某些操作后,触发某些代码的执行
+      - 事件:某些操作,如单击,双击,键盘按下,鼠标移动
+      - 事件源:组件,如按钮,文本输入框
+      - 监听器:代码
+      - 注册监听:将事件,事件源,监听器结合在一起,当事件源上发生了某件事件,则触发监听器代码
+   2. 常见事件
+      1.  点击事件
+         1. onclick:单击事件
+         2. onblclick:双击事件
+      2. 焦点事件
+         1. onblur:失去焦点
+         2. onfocus:元素获得焦点
+      3. 加载事件
+         1. onload:一张页面或一副图像完成加载
+      4. 鼠标事件
+         1. onmousedown:鼠标按钮被按下
+         2. onmouseup:鼠标按键被松开
+         3. onmousemove:鼠标被移动
+         4. onmouseover:鼠标移到某个元素之上
+         5. onmouseout:鼠标从某个元素 移开
+      5. 键盘事件
+         1. onkeydown:某个键盘按键被按下
+         2. onkeyup:某个键盘按键被松开
+         3. onkeypress:某个键盘按键被按下并松开
+      6. 选中和改变
+         1. onchange:域的内容被改变
+         2. onselect:文本被选中
+      7. 表单事件
+         1. onsubmit:确认按钮被点击
+         2. onreset:重置按钮被点击
+   
+   
    
    
    ​    
