@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格反选</title>
+	<style>
+		
+		table{
+			border: 1px solid;
+			margin-left: 30%;
+			width: 500px;
+		}
+		td,th{
+			text-align: center;
+			border: 1px solid;
+		}
+		div{
+			margin-left: 30%;
+			/*margin-top: 30%;*/
+		}
+		.over{
+			background-color: pink;
+		}
+		.out{
+			background-color: white;
+		}
+
+	</style>
+
+	<script>
+	
+		window.onload = function(){
+			
+			//全选
+			document.getElementById("selectAll").onclick = function(){
+				var cbs = document.getElementsByName("cb");
+				
+				for (var i = 0; i < cbs.length; i++) {
+					cbs[i].checked = true;
+				}
+
+			}
+			//非全选
+			document.getElementById("unSelectAll").onclick = function(){
+				var cbs = document.getElementsByName("cb");
+				
+				for (var i = 0; i < cbs.length; i++) {
+					cbs[i].checked = false;
+				}
+
+			}
+			//反选
+			document.getElementById("selectRev").onclick = function(){
+				var cbs = document.getElementsByName("cb");
+				
+				for (var i = 0; i < cbs.length; i++) {
+					cbs[i].checked = !cbs[i].checked;
+				}
+
+			}
+			//反选
+			document.getElementById("fistCb").onclick = function(){
+				var cbs = document.getElementsByName("cb");
+				
+				for (var i = 0; i < cbs.length; i++) {
+					cbs[i].checked = this.checked;
+					// cbs[i].checked = cbs[0].checked;
+				}
+
+			}
+
+			var trs = document.getElementsByTagName("tr");
+
+			for (var i = 0; i <trs.length; i++) {
+		
+				trs[i].onmouseover = function(){
+					this.className = "over";
+				}
+
+				trs[i].onmouseout = function(){
+					this.className = "out";
+				}
+			
+
+
+
+			}
+
+
+
+
+
+		}
+	
+
+	
+
+
+
+	</script>
+
+
+</head>
+<body>
+	
+	<table>
+		<!-- caption定义表格标题 -->
+		<caption>统计表</caption>
+		<tr>
+			<td><input type="checkbox" name="cb" id="fistCb"></td>
+			<th>编号</th>
+			<th>姓名</th>
+			<th>性别</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb"></td>
+			<td>1</td>
+			<td>周星驰</td>
+			<td>男</td>
+			<td ><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb"></td>
+			<td>2</td>
+			<td>朱茵</td>
+			<td>女</td>
+			<td ><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="cb"></td>
+			<td>3</td>
+			<td>成龙</td>
+			<td>男</td>
+			<td ><a href="javascript:void(0);" onclick="delTr(this)">删除</a></td>
+		</tr>
+	</table>
+	
+	<div>
+		<input type="button" id="selectAll" value="全选">
+		<input type="button" id="unSelectAll" value="全不选">
+		<input type="button" id="selectRev" value="反选">
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/learnJs.iml" filepath="$PROJECT_DIR$/.idea/learnJs.iml" />
       <module fileurl="file://$PROJECT_DIR$/learnJs.iml" filepath="$PROJECT_DIR$/learnJs.iml" />
     </modules>
   </component>

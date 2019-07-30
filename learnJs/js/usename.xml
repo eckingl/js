@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<usename>
+	
+	<user id='1'>
+		<name>zhangsan</name>
+		<age>21</age>
+		<genger>男</genger>
+	</user>
+	
+	<user id='2'>
+		<name>zhangsan</name>
+		<age>243</age>
+		<genger>女</genger>
+	</user>
+
+
+</usename>
